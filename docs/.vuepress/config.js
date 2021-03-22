@@ -1,5 +1,5 @@
 // .vuepress/config.js
-const DEPLOY_DOMAIN = 'https://filecoin-project.github.io/retrieval-market-spec'
+const DEPLOY_DOMAIN = 'https://filecoin-retrieval-spec.netlify.app'
 const pageSuffix = '/'
 
 module.exports = {
