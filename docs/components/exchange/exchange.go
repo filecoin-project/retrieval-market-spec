@@ -37,7 +37,7 @@ type ExchangeClientAPI interface {
 		payloadCID cid.Cid,
 		selector ipld.Node,
 		parameters ipld.Node,
-	) (datatransfer.Voucher, error)
+	) (DealID, error)
 
 	// SendData requests to send someone data in excahgne for payment - probably
 	// unused for some time
@@ -45,7 +45,7 @@ type ExchangeClientAPI interface {
 		payloadCID cid.Cid,
 		selector ipld.Node,
 		parameters ipld.Node,
-	) (datatransfer.Voucher, error)
+	) (DealID, error)
 
 	// CancelDeal attempts to cancel an inprogress deal
 	CancelDeal(id DealID) error

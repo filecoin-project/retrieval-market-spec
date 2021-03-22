@@ -7,6 +7,8 @@ v0: >
   Data Transfer has been implemented, but only supports a single Transport mechanism. Moreover, the current implementation has architectural issues, as documented in [go-data-transfer#158](https://github.com/filecoin-project/go-data-transfer/issues/158) 
 v05: >
   Team Ignite is implementing a second transport for data transfer as part of the F3 Project. As part of this, Team Ignite will need to improve Data Transfer to support multiple protocols, and determine how Data Transfer will choose between protocols.
+v2: >
+  Data Transfer has not yet tacked the problem of very large transfer. This is something we will need to look at to enable usage of large static datasets in the retrieval market. 
 ---
 
 <Header />
@@ -17,6 +19,7 @@ v05: >
 | ---- | ---- | ---- |
 | Transport | multiple | default |
 | Exchange | multiple | ExchangeValidatorAPI, ExchangeCheckpointValidatorAPI |
+| ContentDistribution | optional | HostingValidatorAPI |
 
 ## Roadmap
 
