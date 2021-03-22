@@ -3,7 +3,7 @@ const DEPLOY_DOMAIN = 'https://filecoin-project.github.io/retrieval-market-spec'
 const pageSuffix = '/'
 
 module.exports = {
-  base: '/retrieval-market-spec/',
+  base: '/',
   head: require('./head'),
   locales: {
     '/': {

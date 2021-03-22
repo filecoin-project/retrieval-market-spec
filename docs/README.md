@@ -1,6 +1,6 @@
 ---
 title: 'Retrieval Market Spec'
-description: 'Specification For Components In A Retrieval Decentralized Data Market'
+description: 'Specification For Components In A Decentralized Data Market'
 breadcrumb: 'Home'
 sidebar: true
 ---
