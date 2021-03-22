@@ -1,5 +1,5 @@
 // .vuepress/config.js
-const DEPLOY_DOMAIN = 'https://filecoin-project.github.io'
+const DEPLOY_DOMAIN = 'https://filecoin-project.github.io/retrieval-market-spec'
 const pageSuffix = '/'
 
 module.exports = {
@@ -8,8 +8,8 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'Filecoin Docs',
-      description: 'Filecoin Documentation'
+      title: 'Filecoin Retreival Market',
+      description: 'Filecoin Retrieval Market Specification'
     }
   },
   markdown: {
@@ -39,11 +39,11 @@ module.exports = {
     keywords:
       'Filecoin, crypto, mining, blockchain, IPFS, dweb, protocol, libp2p, ipld, multiformats, bitswap, decentralized web, InterPlanetary File System, dapp, documentation, docs, Protocol Labs',
     domain: DEPLOY_DOMAIN,
-    docsRepo: 'filecoin-project/filecoin-docs',
+    docsRepo: 'filecoin-project/retrieval-market-spec',
     docsDir: 'docs',
     docsBranch: 'master',
     feedbackWidget: {
-      docsRepoIssue: 'filecoin-project/filecoin-docs'
+      docsRepoIssue: 'filecoin-project/retrieval-market-spec'
     },
     editLinks: false,
     nextLinks: true,
@@ -65,19 +65,31 @@ module.exports = {
         nav: require('./nav/en'),
         sidebar: {
           '/components/': [
+            '',
             'transport/',
             'datatransfer/',
-          //  'exchange-requestor/',
-          //  'exchange-responder/',
+            'exchange/',
             'chain/',
             'wallet/',
             'paymentchannelmanager/',
             'contentrouting/',
-          //  'miner-index/',
-          //  'content-bid-index/',
-          //  'content-distribution/',
+            'minerindex/',
+            'contentbidindex/',
+            'contentdistribution/',
+          ],
+          '/roles/': [
+            '',
+            'retrievalclient/',
+            'retrievalprovider/',
+            'contentprovider/',
+            'paymentprovider/',
+            'marketplaceprovider/',
           ],
           '/': [
+            '',
+            'roadmap',
+            'architecture',
+            'howtoread',
           ]
         }
       }
@@ -93,22 +105,6 @@ module.exports = {
         headerTopOffset: 120
       }
     ],
-    '@vuepress/plugin-last-updated',
-    [
-      'vuepress-plugin-clean-urls',
-      {
-        normalSuffix: pageSuffix,
-        indexSuffix: pageSuffix,
-        notFoundPath: '/404/'
-      }
-    ],
-    [
-      '@vuepress/google-analytics',
-      {
-        ga: 'UA-148766289-2'
-      }
-    ],
-    ['vuepress-plugin-code-copy', { align: 'bottom', color: '#fff' }],
     [
       'vuepress-plugin-medium-zoom',
       {
@@ -119,61 +115,6 @@ module.exports = {
           background: 'rgba(255,255,255,0.8)',
           scrollOffset: 0
         }
-      }
-    ],
-    [
-      'vuepress-plugin-seo',
-      {
-        siteTitle: ($page, $site) => $site.title,
-        title: $page => $page.title,
-        description: $page => $page.frontmatter.description,
-        author: ($page, $site) =>
-          $page.frontmatter.author || $site.themeConfig.author,
-        tags: $page => $page.frontmatter.tags,
-        twitterCard: _ => 'summary_large_image',
-        type: $page =>
-          ['articles', 'posts', 'blog'].some(folder =>
-            $page.regularPath.startsWith('/' + folder)
-          )
-            ? 'article'
-            : 'website',
-        url: ($page, $site, path) => ($site.themeConfig.domain || '') + path,
-        image: ($page, $site) =>
-          $page.frontmatter.image
-            ? ($site.themeConfig.domain || '') + $page.frontmatter.image
-            : ($site.themeConfig.domain || '') + $site.themeConfig.defaultImage,
-        publishedAt: $page =>
-          $page.frontmatter.date && new Date($page.frontmatter.date),
-        modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
-        customMeta: (add, context) => {
-          const { $site, image } = context
-          add(
-            'twitter:site',
-            ($site.themeConfig.author && $site.themeConfig.author.twitter) || ''
-          )
-          add('image', image)
-          add('keywords', $site.themeConfig.keywords)
-        }
-      }
-    ],
-    [
-      'vuepress-plugin-sitemap',
-      {
-        hostname: DEPLOY_DOMAIN
-      }
-    ],
-    [
-      'vuepress-plugin-robots',
-      {
-        host: DEPLOY_DOMAIN
-      }
-    ],
-    [
-      'vuepress-plugin-canonical',
-      {
-        // add <link rel="canonical" header (https://tools.ietf.org/html/rfc6596)
-        // to deduplicate SEO across all copies loaded from various public gateways
-        baseURL: DEPLOY_DOMAIN
       }
     ],
     [

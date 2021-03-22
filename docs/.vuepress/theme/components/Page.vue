@@ -5,13 +5,7 @@
     <Content v-if="!isHome" class="theme-default-content" />
     <Home v-else-if="isHome" />
     <div class="content-footer" v-if="!isContentStatus && !isHome">
-      <Feedback
-        class="content-feedback"
-        evtYes="information_helpful"
-        evtNo="information_not_helpful"
-      />
       <PageNav v-bind="{ sidebarItems }" />
-      <LegacyCallout />
       <PageEdit />
     </div>
 
@@ -48,6 +42,7 @@ export default {
   props: ['sidebarItems'],
   computed: {
     isContentStatus: function () {
+      console.log(this.sidebarItems)
       return !!(this.$frontmatter && this.$frontmatter.issueUrl)
     },
     isHome: function () {

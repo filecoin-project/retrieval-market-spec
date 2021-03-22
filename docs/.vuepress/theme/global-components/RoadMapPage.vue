@@ -1,23 +1,20 @@
 <template>
 <div class="roadmap-panel-page">
-  <v-expansion-panels>
-    <v-expansion-panel
+  <div
       v-for="(item,i) in roadmapItems"
       :key="i"
     >
-      <v-expansion-panel-header>
+      <h3>
         {{item.header}}
-      </v-expansion-panel-header>
-      <v-expansion-panel-content v-html="item.description">
-      </v-expansion-panel-content>
-    </v-expansion-panel>
-  </v-expansion-panels>
+      </h3>
+      <div v-html="item.description">
+      </div>
+  </div>
 </div>
 </template>
 
 <script>
 import MarkdownIt from 'markdown-it'
-
 const md = new MarkdownIt()
 
 export default {
@@ -48,7 +45,7 @@ export default {
           description: this.$frontmatter.v2
         })
       }
-      roadmapItems = roadmapItems.map(({header, description}) => ({header, description: `<div class="v-expansion-panel-content__wrap">${md.render(description)}</div>`}))
+      roadmapItems = roadmapItems.map(({header, description}) => ({header, description: `${md.render(description)}`}))
       return roadmapItems
     },
   }
@@ -58,16 +55,4 @@ export default {
 .roadmap-panel-page {
   box-sizing: border-box;
   margin-top: 1.13rem;
-}
-.v-expansion-panel-header {
-  font-size: 1.35rem !important;
-}
-</style>
-<style>
-.v-expansion-panel-content__wrap {
-    padding: 0 24px 16px;
-    flex: 1 1 auto;
-    max-width: 100%;
-}
-</style>
-<style scoped src="vuetify/dist/vuetify.min.css">
+}</style>

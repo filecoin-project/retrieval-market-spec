@@ -35,6 +35,13 @@ module.exports = [
       color: '#3a0839'
     }
   ],
+[ 
+  'link',
+  {
+    rel: "stylesheet",
+    href: "https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css"
+  }
+],
   ['meta', { name: 'msapplication-TileColor', content: '#3a0839' }],
   [
     'meta',
