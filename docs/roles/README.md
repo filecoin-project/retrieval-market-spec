@@ -28,3 +28,7 @@ Laid out this way, roles are actually quite similar to a traditional marketplace
 The development roadmap for roles has two primary goals:
 - Decouple existing roles so that people can participate in the market while running way fewer retrieval market components, significantly lowering the barrier to entry
 - Build out roles where the existing feature set is limited or missing.
+
+# Multiple Roles
+
+Roles are helpful to distinguish high level functions in the retrieval market. However, just like in any market, an individual or organization may actually perform multiple roles. As an example, a MarketPlace Provider, usually a larger entity with likely lots of computer power, may also make an ideal Payments Provider.

@@ -26,5 +26,5 @@ The rest of this specification describes in detail the components and role that 
 As a tool for enforcing correct typing, the repository containing this specification is also a go module, and all go code should compile correctly within this module (external dependencies intentionally do not include large existing monoliths like Lotus). This spec does not contain and will not contain implementations.
 
 ::: tip NEXT STEPS
-Now that you've familiarized yourself with how this specification works, you're ready to read about the Retrieval Market's [Components](./components/) and [Roles](./roles)
+Now that you've familiarized yourself with how this specification works, you're ready to read about the Retrieval Market's low-level [Components](./components/) and high-level [Roles](./roles)
 :::

@@ -36,5 +36,5 @@ This is based of the idea that retrieval miners offer hosting deals to content p
 <<< @/docs/components/contentdistribution/contentdistribution.go
 
 ::: tip
-You've made it to the end of the Components section. Now maybe you'd like to learn how all these components come together to perform higher level [Roles](./roles)
+You've made it to the end of the Components section. Now maybe you'd like to learn how all these components come together to perform higher level [Roles](../../roles/)
 :::
