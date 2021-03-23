@@ -27,7 +27,8 @@ type MinerRecord struct {
 	SuccessRate big.Int
 	// BandwidthAvgBytes is a measurement of the miners average bandwidth
 	BandwidthAvgBytes uint64
-	// TimeToFirstByte is a measurement of the miner's latency -- how long they take to serve the first byte
+	// TimeToFirstByte is a measurement of the miner's latency -- how long they
+	// take to serve the first byte
 	TimeToFirstByte time.Duration
 }
 
