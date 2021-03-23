@@ -19,17 +19,17 @@ The V0.5 milestone is focused on lowering barriers to access, and making existin
 
 ## **V1 Milestone**: 1 Year
 
-The goal of the V1 1 year-milestone is "MVP for a web3 content delivery network". By V1, each major part of the Retrieval market is built, if not built in ideal or feature complete ways. The market should deliver subsecond retrieval times to off chain dapp users, unlocking significant product market fit for the web 3 stack for this segment
+The goal of the V1 1 year-milestone is "MVP for a Web 3 content delivery network". By V1, each major part of the Retrieval market is built, if not built in ideal or feature complete ways. The market should deliver subsecond retrieval times to off chain dapp users, unlocking significant product market fit for this segment
 
-The V1 Milestone is defined as much by what's not in it as what is. Specifically, the V1 Milestone is comprised only of solutions for which there is a clear path to implementation. In other words, nothing that *needs research*. This includes:
+The V1 Milestone is defined as much by what's not in it as what is. Specifically, the V1 Milestone is comprised only of solutions for which there is a clear path to implementation. In other words, nothing that *needs deep research*. This includes:
 - Any kind of on chain incentives or other complex cryptoeconomics
 - Future content routing solutions (see PL Research 2021 Endeavor)
 - Fancy geographic on demand content distribution and content marketplaces (see 3DM docs)
 
 ## **V2 Milestone**: Future Directions
 
-With the above areas of research hopefully producing more well defined solutions in a year or so, V2 encompasses everything concrete we'd like to build next. It has no specific timeframe for implementation or delivery. The goal here is to
+With the above areas of research hopefully producing more well defined solutions in a year or so, V2 encompasses everything concrete we'd like to build next. It has no specific timeframe for implementation or delivery. 
 
 ::: danger
-This ends to non-technical introduction to this specification. From here on out, things are going to get engineer-ey
+This ends the non-technical introduction to this specification. From here on out, things are going to get jargon-ey
 :::
