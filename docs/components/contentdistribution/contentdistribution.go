@@ -5,6 +5,7 @@ import (
 
 	"github.com/filecoin-project/go-state-types/abi"
 	"github.com/filecoin-project/retrieval-market-spec/docs/components/contentrouting"
+	"github.com/filecoin-project/retrieval-market-spec/docs/components/datatransfer"
 	"github.com/ipfs/go-cid"
 	"github.com/ipld/go-ipld-prime"
 	"github.com/libp2p/go-libp2p-core/peer"
@@ -128,4 +129,28 @@ type HostingProviderAPI interface {
 
 	// get notified when certain types of events happen
 	EventsNotify() <-chan ProviderHostingEventData
+}
+
+// HostingValidatorAPI is an interface provided to data transfer to validate
+// incoming offers by the party seeking to provide data
+type HostingValidatorAPI interface {
+	// ValidatePush validates an incoming data transfer push request received
+	// for
+	// this exchange protocol
+	ValidatePush(
+		sender peer.ID,
+		voucher datatransfer.Voucher,
+		baseCid cid.Cid,
+		selector ipld.Node,
+	) (datatransfer.VoucherResult, error)
+
+	// ValidatePull validates an incoming data transfer pull request received
+	// for
+	// this exchange protocol
+	ValidatePull(
+		receiver peer.ID,
+		voucher datatransfer.Voucher,
+		baseCid cid.Cid,
+		selector ipld.Node,
+	) (datatransfer.VoucherResult, error)
 }
