@@ -38,8 +38,8 @@ v2:
 
 This API is purely speculative, based on the likely needs for people seeking content they can retrieve quickly
 
-::: danger TODO
-Sync up with ResNetLab to figure out if this interface is compatible with what they are building
+::: tip
+ResNetLab is working on a new content routing system. The new interface will be very general -- allowing storage of fairly arbitrary data on composoble routing platforms (DHT, index, etc). When their work done, we will either switch to use their interface directly or build the interface described below on top of it.
 :::
 
 <<< @/docs/components/contentrouting/contentrouting.go
