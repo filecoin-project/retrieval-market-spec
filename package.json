@@ -24,6 +24,7 @@
     "markdown-it-video": "^0.6.3",
     "prettier": "^2.2.1",
     "stylus-supremacy": "^2.15.0",
+    "vue-disqus": "^4.0.1",
     "vuepress": "^1.8.2",
     "vuepress-plugin-canonical": "^1.0.0",
     "vuepress-plugin-check-md": "0.0.2",
@@ -70,6 +71,5 @@
     "docs:dev": "vuepress --no-clear-screen dev docs",
     "docs:build": "npm run docs:links && vuepress build docs",
     "docs:links": "vuepress check-md docs"
-  },
-  "dependencies": {}
+  }
 }
