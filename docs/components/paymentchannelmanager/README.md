@@ -17,7 +17,7 @@ v2:
 
 ## What is a payment channel?
 
-A payment channel is a direct payment connection between two actors in a cryptocurrency network. Through on-chain opening and closing transactions, payment channels leverage the security of the underlying blockchain to provide trustless payments between two parties without needing to submit each intermediate payment on chain. 
+A payment channel is a direct payment connection between two participants in a cryptocurrency network. Through on-chain opening and closing transactions, payment channels leverage the security of the underlying blockchain to provide trustless payments between two parties without needing to submit each intermediate payment on chain. 
 
 Because we assume that retrievals need to happen fast, we further assume that we cannot block any step of retrieval for an on chain transaction. This must happen later. As such, we need some kind of payment channel system that operates as an L2 solution to the underlying L1 blockchain.
 

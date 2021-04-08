@@ -1,7 +1,7 @@
 ---
 title: 'Understanding Roles'
 description: >
-  People or organizations participating in the retrieval market perform different roles in the overall functioning of the market. Depending on which role or roles a given actor in the market wants to play, they'll have a minimum set of components they need to operate to perform that role.
+  People or organizations participating in the retrieval market perform different roles in the overall functioning of the market. Depending on which role or roles a given participant in the market wants to play, they'll have a minimum set of components they need to operate to perform that role.
 breadcrumb: 'Roles'
 confidenceLevel: Reliable
 ---

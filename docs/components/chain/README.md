@@ -1,6 +1,6 @@
 ---
 title: 'Filecoin Chain'
-description: 'A chain contains functionality to interact with the Filecoin blockchain as needed for retrieval, and includes both reading state and pushing chain messages. For the purposes of retrieval, we may need to send funds between actors, and interact with filecoin payment channels. The rest of the chain is not used dirrectly by retrieval now. Any validator node on the Filecoin network should be sufficient to serve the chain API'
+description: 'A chain contains functionality to interact with the Filecoin blockchain as needed for retrieval, and includes both reading state and pushing chain messages. For the purposes of retrieval, we may need to send funds between particpants, and interact with filecoin payment channels. The rest of the chain is not used dirrectly by retrieval now. Any validator node on the Filecoin network should be sufficient to serve the chain API'
 breadcrumb: 'Filecoin Chain'
 confidenceLevel: 'Stable'
 v0: |
