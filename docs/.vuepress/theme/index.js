@@ -2,5 +2,5 @@
 
 module.exports = {
   extend: '@vuepress/theme-default',
-  plugins: [require('./plugins/vuepress-plugin-chunkload-redirect'), require('./plugins/vuepress-plugin-disqus')]
+  plugins: [require('./plugins/vuepress-plugin-chunkload-redirect'), require('./plugins/vuepress-plugin-timeline-roadmap')]
 }

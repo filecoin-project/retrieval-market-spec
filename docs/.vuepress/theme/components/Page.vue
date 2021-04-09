@@ -6,7 +6,6 @@
     <Home v-else-if="isHome" />
     <div class="content-footer" v-if="!isContentStatus && !isHome">
       <PageNav v-bind="{ sidebarItems }" />
-      <Disqus shortname="filecoin-retrieval-spec" :pageConfig="disqusPageConfig"/>
       <PageEdit />
     </div>
 
@@ -43,16 +42,11 @@ export default {
   props: ['sidebarItems'],
   computed: {
     isContentStatus: function () {
-      console.log(this.sidebarItems)
+      console.log(this)
       return !!(this.$frontmatter && this.$frontmatter.issueUrl)
     },
     isHome: function () {
       return !!(this.$frontmatter && this.$frontmatter.homepage)
-    },
-    disqusPageConfig: function() {
-      return {
-        identifier: this.$frontmatter.commentid || this.$frontmatter.permalink,
-      }
     },
   },
   methods: {

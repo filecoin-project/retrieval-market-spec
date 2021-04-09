@@ -91,7 +91,7 @@ module.exports = {
             'roadmap',
             'architecture',
             'howtoread',
-          ]
+          ],
         }
       }
     }

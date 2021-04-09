@@ -30,6 +30,11 @@ The V1 Milestone is defined as much by what's not in it as what is. Specifically
 
 With the above areas of research hopefully producing more well defined solutions in a year or so, V2 encompasses everything concrete we'd like to build next. It has no specific timeframe for implementation or delivery. 
 
+::: tip
+To get a detailed view of every thing we intend to build for each milestone, see
+[Detailed Roadmap](./detailedroadmap/)
+:::
+
 ::: danger
 This ends the non-technical introduction to this specification. From here on out, things are going to get jargon-ey
 :::
