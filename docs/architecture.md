@@ -114,16 +114,19 @@ node "MarketPlaceProvider" {
   RetrievalClient -------down-( ReputationalIndexAPI
   RetrievalProvider -------down-( ContentBidIndexAPI
   ContentProvider -------down-( ContentBidIndexAPI
-  RetrievalProvider -------down-( ContentRoutingAPI
+  RetrievalProvider -------down-( ContentProvidingAPI
   RetrievalClient -------down-( ContentRoutingAPI
   ReputationalIndexAPI -- [Reputational Index]
   ChainAPI .....down. [Reputational Index]
   ContentBidIndexAPI -- [Content Bid Index]
+  ContentProvidingAPI -- [Content Routing (Indexed)]
   ContentRoutingAPI -- [Content Routing (Indexed)]
 }
 
+() ContentProvidingAPI as DContentProvidingAPI
 () ContentRoutingAPI as DContentRoutingAPI
-RetrievalProvider -------down-( DContentRoutingAPI
+RetrievalProvider -------down-( DContentProvidingAPI
 RetrievalClient -------down-( DContentRoutingAPI
+DContentProvidingAPI -- [Content Routing (Distributed - DHT)]
 DContentRoutingAPI -- [Content Routing (Distributed - DHT)]
 @enduml

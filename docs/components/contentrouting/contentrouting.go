@@ -29,25 +29,8 @@ type ContentProvider struct {
 	Region       GeographicRegion
 }
 
-// ContentRoutingAPI provides mechanisms to find providers of content,
-// and offer content to the network
-type ContentRouting interface {
-	// ProvideCID is called by a provider to announce that they are offering
-	// the given content to a network, on the given exchange protocols
-	// and parameters
-	ProvideCID(ctx context.Context,
-		cid cid.Cid,
-		regions []GeographicRegion,
-		exchangeOptions []ExchangeOption) error
-
-	// ProvideDAG is called by a provider to announce that they are offering
-	// a DAG, expressed by a CID+Selector, to a network, on the given exchange
-	//  protocols and parameters
-	ProvideDAG(ctx context.Context,
-		cid cid.Cid,
-		selector ipld.Node,
-		regions []GeographicRegion,
-		exchangeOptions []ExchangeOption) error
+// ContentRoutingAPI provides mechanisms to find providers of content
+type ContentRoutingAPI interface {
 
 	// Search for peers who are able to provide the given cid
 	//
@@ -58,7 +41,12 @@ type ContentRouting interface {
 		desiredRegion GeographicRegion,
 		acceptedExchanges []exchange.ExchangeProtocolName,
 		count int) (<-chan ContentProvider, error)
+}
 
+// DAGContentRoutingAPI provides mechanisms to find providers of content by
+// CID+Selector
+type DAGContentRoutingAPI interface {
+	ContentRoutingAPI
 	// Search for peers who are able to provide the given DAG, as expressed
 	// by CID + Selector
 	//
@@ -70,4 +58,49 @@ type ContentRouting interface {
 		desiredRegion GeographicRegion,
 		acceptedExchanges []exchange.ExchangeProtocolName,
 		count int) (<-chan ContentProvider, error)
+}
+
+// ContentProvidingAPI offers tools for providers to annouce their content to
+// the network
+type ContentProvidingAPI interface {
+	// ProvideCID is called by a provider to announce that they are offering
+	// the given content to a network, on the given exchange protocols
+	// and parameters
+	ProvideCID(ctx context.Context,
+		cid cid.Cid,
+		regions []GeographicRegion,
+		exchangeOptions []ExchangeOption) error
+}
+
+type PrioritizedCID struct {
+	Priority uint64
+	Cid      cid.Cid
+}
+
+// BatchConcentProvidingAPI offers tools for providers to announce several CIDs at once,
+// including identifying those that are most likely semantically important
+type BatchConcentProvidingAPI interface {
+	ContentProvidingAPI
+
+	// ProvideCIDs is called by a provider to announce that they are offering
+	// a set of CIDS to the network
+	ProvideCIDs(ctx context.Context,
+		prioritizedCIDs []PrioritizedCID,
+		regions []GeographicRegion,
+		exchangeOptions []ExchangeOption) error
+}
+
+// DAGContentProvidingAPI offers tools for providers to annouce their content to
+// the network by CID+Selector
+type DAGContentProvidingAPI interface {
+	ContentProvidingAPI
+
+	// ProvideDAG is called by a provider to announce that they are offering
+	// a DAG, expressed by a CID+Selector, to a network, on the given exchange
+	//  protocols and parameters
+	ProvideDAG(ctx context.Context,
+		cid cid.Cid,
+		selector ipld.Node,
+		regions []GeographicRegion,
+		exchangeOptions []ExchangeOption) error
 }
