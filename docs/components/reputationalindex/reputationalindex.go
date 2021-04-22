@@ -1,4 +1,4 @@
-package minerindex
+package reputationalindex
 
 import (
 	"time"
@@ -46,9 +46,9 @@ type SearchParams struct {
 	MinBandwidthAvgBytes uint64
 }
 
-// MinerIndexAPI provides information to prospective retrieval clients and
+// ReputationalIndexAPI provides information to prospective retrieval clients and
 // content distributors about miners on the network
-type MinerIndexAPI interface {
+type ReputationalIndexAPI interface {
 	SearchMiners() (<-chan MinerRecord, error)
 	ListMiners() (<-chan MinerRecord, error)
 }

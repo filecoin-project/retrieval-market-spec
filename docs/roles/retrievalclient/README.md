@@ -11,7 +11,7 @@ v1: |
   Running retrieval through go-ipfs might produce a smaller, more functional retrieval client. To do this we would:
   - Put go-data-transfer in go-ipfs
   - Connect go-ipfs to index-style Content Routing for Filecoin
-  - Implement clear rules for negotiation between IPFS transfer vs Exchange based paid retrieval. Figure out how if at all IPFS will interface with a Miner Index to determine the most reputable miners to pull from.
+  - Implement clear rules for negotiation between IPFS transfer vs Exchange based paid retrieval. Figure out how if at all IPFS will interface with a Reputational Index to determine the most reputable miners to pull from.
   - To keep go-ipfs open and nuetral, we may want leave Filecoin specific exchange out of the go-ipfs binary. Instead, we could allow IPFS to communicate with any Exchange Client running locally but not in the same process (enabling potentially non-Filecoin paid retrievals)
   - The smallest version of this second process consists of an Exchange Client and a Wallet, talking to a remote Payment Provider, if such a provider exists.
   - A slightly larger version would run a Payment Channel Manager locally but talk to a remote Chain
@@ -43,7 +43,7 @@ A retrieval client can run the following components locally, but will often inst
 2. Payment Channel Manager
 3. Chain
 
-A retrieval client may also access a remote Miner Index to identify Retrieval Providers with good reputations.
+A retrieval client may also access a remote Reputational Index to identify Retrieval Providers with good reputations.
 
 A retrieval client generally does not interact with the Content Bid Index or Content Distribution components.
 

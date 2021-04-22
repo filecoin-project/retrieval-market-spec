@@ -1,9 +1,9 @@
 ---
-title: 'Miner Index'
+title: 'Reputational Index'
 description:
-  Miner Index is a reputational index for miners in the market. It allows prospective retrieval clients and content providers to search for the best miners from which to store and retrieve their data.
+  Reputational Index is a reputational index for miners in the market. It allows prospective retrieval clients and content providers to search for the best miners from which to store and retrieve their data.
 confidenceLevel: Brainstorm
-breadcrumb: 'Miner Index'
+breadcrumb: 'Reputational Index'
 v0: |
   Not having a reputational index has made retrieval in the current Filecoin network largely unusable. During the next three months, Protocol Labs will likely build a prototype reputation index in the form of a retrieval deal bot. The bot will make deals with storage miners and begin to asses the reliability of different miners. 
 v05: >
@@ -33,4 +33,4 @@ This API is purely speculative
 Sync up with current designs for retrieval deal bot
 :::
 
-<<< @/docs/components/minerindex/minerindex.go
+<<< @/docs/components/reputationalindex/reputationalindex.go

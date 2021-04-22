@@ -74,7 +74,7 @@ module.exports = {
             'wallet/',
             'paymentchannelmanager/',
             'contentrouting/',
-            'minerindex/',
+            'reputationalindex/',
             'contentbidindex/',
             'contentdistribution/',
           ],

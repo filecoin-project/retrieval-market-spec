@@ -36,7 +36,7 @@ A retrieval provider can run the following components locally, but will often in
 3. Chain
 4. Content Bid Index
 
-While a retrieval provider is listed on a Miner Index, they generally don't act directly with the index.
+While a retrieval provider is listed on a Reputational Index, they generally don't act directly with the index.
 
 ## Roadmap
 

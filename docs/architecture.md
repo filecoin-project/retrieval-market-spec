@@ -111,13 +111,13 @@ node "Payment Provider" {
   PaymentChannelManagerAPI -up- [Payment Channel Manager]
 }
 node "MarketPlaceProvider" {
-  RetrievalClient -------down-( MinerIndexAPI
+  RetrievalClient -------down-( ReputationalIndexAPI
   RetrievalProvider -------down-( ContentBidIndexAPI
   ContentProvider -------down-( ContentBidIndexAPI
   RetrievalProvider -------down-( ContentRoutingAPI
   RetrievalClient -------down-( ContentRoutingAPI
-  MinerIndexAPI -- [Miner Index]
-  ChainAPI .....down. [Miner Index]
+  ReputationalIndexAPI -- [Reputational Index]
+  ChainAPI .....down. [Reputational Index]
   ContentBidIndexAPI -- [Content Bid Index]
   ContentRoutingAPI -- [Content Routing (Indexed)]
 }

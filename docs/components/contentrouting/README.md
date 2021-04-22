@@ -28,7 +28,7 @@ v2:
 | Name | Kind | APIs |
 | ---- | ---- | ---- |
 | Chain | optional | default |
-| Miner Index | optional | default |
+| Reputational Index | optional | default |
 
 ## Roadmap
 

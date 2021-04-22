@@ -26,7 +26,7 @@ A payment provider must run the following components themselves:
 
 A payment provider will often interact with several remote wallets. Determining the appropriate authentication scheme to enable this is an open problem.
 
-A payment provider generally does not interact with the Content Bid Index,  Content Distribution, Transport, Data Transfer, Exchange, Content Routing, or Miner Index components. Many of these components utilize a Payment Provider to make financial transactions. But from the payment provider's point of view, it doesn't know anything about the nature of the financial transactions that run through it.
+A payment provider generally does not interact with the Content Bid Index,  Content Distribution, Transport, Data Transfer, Exchange, Content Routing, or Reputational Index components. Many of these components utilize a Payment Provider to make financial transactions. But from the payment provider's point of view, it doesn't know anything about the nature of the financial transactions that run through it.
 
 ## Roadmap
 

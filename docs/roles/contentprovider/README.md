@@ -33,7 +33,7 @@ A content provider can run the following components locally, but will often inst
 1. Payment Channel Manager
 2. Chain
 
-A content provider also makes remote calls to list their bids on a Content Bid Index and may call a Miner Index to check the reputation of the miners they are storing with
+A content provider also makes remote calls to list their bids on a Content Bid Index and may call a Reputational Index to check the reputation of the miners they are storing with
 
 A content provider generally does not interact with Content Routing.
 
